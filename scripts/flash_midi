@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+FIRMWARE="../firmware/arduino_midi.hex"
+
+
+function bailout () {
+    echo
+    echo "Error. Is the Arduino really in flash mode?"
+    exit 1
+}
+
+
+echo "Hit enter if Arduino is in flash mode. (shorten RESET and GND)"
+
+read
+
+sudo dfu-programmer atmega16u2 erase
+if [ $? -ne 0 ]; then
+    bailout
+fi
+
+sudo dfu-programmer atmega16u2 flash "${FIRMWARE}"
+if [ $? -ne 0 ]; then
+    bailout
+fi
+
+sudo dfu-programmer atmega16u2 reset
+if [ $? -ne 0 ]; then
+    bailout
+fi
+
+echo
+echo "Done. Now reconnect the Arduino."

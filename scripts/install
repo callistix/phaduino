@@ -1,0 +1,6 @@
+#!/bin/bash
+
+arduino-cli core install arduino:avr
+
+arduino-cli lib update-index
+arduino-cli lib install "Adafruit TLC5947"

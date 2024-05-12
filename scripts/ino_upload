@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "${OSTYPE}" == "darwin23" ]; then
+    arduino-cli compile -b arduino:avr:uno $1
+    if [ "$?" -eq 0 ]; then
+        arduino-cli upload -p /dev/cu.usbmodem1421301 -b arduino:avr:uno arduino/lfo_module_02
+    fi
+else
+    arduino --upload $1
+fi

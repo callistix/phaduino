@@ -1,0 +1,8 @@
+# FreeCAD
+*.FCBak
+*.lck
+
+# KiCAD
+/kicad/phaduino/phaduino-backups/**
+\#auto_saved_files\#
+fp-info-cache

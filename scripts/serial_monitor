@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BAUD="9600"
+
+if [ "${OSTYPE}" == "darwin23" ]; then
+    stty -f /dev/cu.usbmodem1421301 raw ${BAUD}
+    cat /dev/cu.usbmodem1421301
+else
+    stty -F /dev/ttyACM0 raw ${BAUD}
+    cat /dev/ttyACM0
+fi
