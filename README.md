@@ -48,9 +48,11 @@ cd sh
 
 # To-do
 
-* support filament is hard to remove, can we space it out more, or have it more loosely attached
-* what happens if print speed is increased for drafts
-
+* do not retract filament on when printing is paused for filament change, as this seems to drop a blob of material, just move the nozzle out of the way
+* text looks messy due to above issue, but maybe increase font size as well to make it more readable, or would a second layer of white filament help maybe?
+* add scale labels for reverb pots
+* add a way to attach sections to each other with screws
+* instantiate object rather than duplicating them
 
 # Links
 
