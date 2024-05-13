@@ -22,37 +22,12 @@ cd sh
 ./flash_midi
 ```
 
-
-# Code hierarchy
-
-* Sections (LFO, DCO, ...)
-    * Controls (LFO rate, LFO delay, 3 way buttons, ...) (objects are control types, i.e. pot, 3 way switch, 5 way switch)
-
-# BOM
-
-## clean up
-
-* [ ] 9/9 LEDs
-* [ ] 3/3 rotary switch 6 positions + caps
-* [ ] 22/22 potentiometers + caps
-* [ ] 0/4 potentiometers with middle notch + caps
-* [ ] 20/29 slide potentiometers + caps
-* [ ] 0/2 slide switch 3 positions + caps
-* [ ] 0/6 slide switch 4 positions + caps
-* [ ] 0/1 slide switch 5 positions + caps
-* [ ] 0/21 push buttons + caps
-* [ ] 0/1 rotary selector 5 positions + cap
-* [ ] 0/2 double digits LED number display
-* [ ] M3 round-head screws 20mm + washers + nuts
-
-
 # To-do
 
 * do not retract filament on when printing is paused for filament change, as this seems to drop a blob of material, just move the nozzle out of the way
-* text looks messy due to above issue, but maybe increase font size as well to make it more readable, or would a second layer of white filament help maybe?
+* text looks messy due to above issue, but maybe increase font size as well to make it more readable, also test adding a second layer
 * add scale labels for reverb pots
 * add a way to attach sections to each other with screws
-* instantiate object rather than duplicating them
 
 # Links
 
