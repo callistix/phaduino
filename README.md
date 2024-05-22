@@ -22,12 +22,49 @@ cd sh
 ./flash_midi
 ```
 
+# Print settings
+
+* filament:
+    * SUNLU PLA+ black (main)
+    * SUNLU PLA+ white (labels)
+
+* nozzle temp.: 220 degrees
+* build plate temp.: 75 degrees
+* wall line count: 3
+* top / bottom layers: 3
+* infill: gyroid 20%
+* print speed: 50mm/s
+* infill speed: 75mm/s
+* support speed: 75mm/s
+* travel speed: 200mm/s
+* retraction distance: 8.0mm
+* fan speed: 100%
+* support pattern: Zig Zag
+* support density: 10%
+* use adaptive layers: no
+
+* "Pause at height" setting for filament changing:
+    * pause layer: last layer before labels
+    * method: BQ
+    * keep motors engaged
+    * park print: yes
+    * retraction: 450mm
+    * standby temperature: 220 deg.
+    * beep at pause
+* enable draft shield: yes (to prime extruder after filament change)
+
+# Notes
+
+* let hot bed cool down entirely before attempting to remove print, or otherwise it will warp
+
 # To-do
 
-* do not retract filament on when printing is paused for filament change, as this seems to drop a blob of material, just move the nozzle out of the way
-* text looks messy due to above issue, but maybe increase font size as well to make it more readable, also test adding a second layer
-* add scale labels for reverb pots
-* add a way to attach sections to each other with screws
+* build plate needs leveling, right side seems more faint
+* when changing to white filament layers, increase nozzle temperature and retraction distance to i.e. 9 or 10mm
+    * for black filament, lower to i.e. 6 or 7 mm retraction distance and 220 degrees
+* make pot labels font size 1 pixel bigger for better readability
+* test and define the way the pieces attach to each other
+    * maybe remove screws 5 and 6 again, then print intermediate connector parts
 
 # Links
 
